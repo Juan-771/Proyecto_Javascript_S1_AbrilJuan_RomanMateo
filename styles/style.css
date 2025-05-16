@@ -20,14 +20,87 @@ body {
 #principalDiv {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    position: relative;
     background-color: black;
+    overflow: hidden;
 }
 
-#principalDiv  img {
+.backgroundImage {
     width: 100%; 
     height: 100%;  
     object-fit: cover; 
     opacity: 0.7;
+    z-index: 1;
 }
 
+.logIn {
+    width: 40%;
+    height: 73%;
+    background-color: black;
+    margin-top: 5%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 60px;
+    position: absolute;   /* lo saca del flujo y lo posiciona encima */
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+}
+
+#divLogo {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+#f1Logo {
+    width: 25%;
+}
+
+#divTexto {
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#divForm {
+    width: 70%; 
+    margin-left: 15%;
+}
+
+#divForm form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+.inputStyle {
+    background-color: black;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 3em;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    color: white;
+    outline: none;  
+}
+
+.buttonStyle {
+    width: 40%;
+    margin-left: 30%;
+    font-size: 1.5em;
+    font-family: 'Formula1';
+    background-color: #FF1E00;
+    color: white;
+    padding: 20px 6px;
+    border: none;
+    border-radius: 22px;
+    margin-top: 0.5em;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.buttonStyle:hover {
+    transform: scale(1.05);  
+}
