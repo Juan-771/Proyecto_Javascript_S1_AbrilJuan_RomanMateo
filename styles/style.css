@@ -36,7 +36,6 @@ body {
 .logIn {
     width: 40%;
     height: 73%;
-    background-color: black;
     margin-top: 5%;
     margin-left: 30%;
     display: flex;
@@ -45,7 +44,9 @@ body {
     position: absolute;   /* lo saca del flujo y lo posiciona encima */
     top: 0;
     left: 0;
-    opacity: 0.9;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.384);
+    box-shadow: 0 0 10px 5px rgba(246, 64, 64, 0.202);
 }
 
 #divLogo {
@@ -62,6 +63,7 @@ body {
     color: white;
     text-align: center;
     font-size: 1.5em;
+    margin-top: 1em;
 }
 
 #divForm {
@@ -76,7 +78,7 @@ body {
 }
 
 .inputStyle {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     border: none;
     border-bottom: 1px solid white;
     margin-bottom: 3em;
@@ -94,7 +96,7 @@ body {
     background-color: #FF1E00;
     color: white;
     padding: 20px 6px;
-    border: none;
+    border: 1px solid white;
     border-radius: 22px;
     margin-top: 0.5em;
     transition: transform 0.2s ease;

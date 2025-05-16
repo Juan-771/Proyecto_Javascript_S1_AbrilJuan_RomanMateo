@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inicia Sesion</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -17,10 +17,10 @@
                 <h2>Bienvenido de nuevo.</h2>
             </div>
             <div id="divForm">
-                <form action="">
-                    <input type="text" class="inputStyle" placeholder="Usuario">
-                    <input type="text" class="inputStyle" placeholder="Contraseña">
-                    <button class="buttonStyle">Iniciar Sesión</button>
+                <form id="loginForm">
+                    <input type="text" class="inputStyle" placeholder="Usuario" id="user" required>
+                    <input type="password" class="inputStyle" placeholder="Contraseña" id="password" required>
+                    <button class="buttonStyle"type="submit">Iniciar Sesión</button>
                 </form>
             </div>
         </div>
