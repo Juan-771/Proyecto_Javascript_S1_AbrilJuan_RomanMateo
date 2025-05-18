@@ -144,3 +144,120 @@ body {
     margin-top: -1em;
     margin-left: 1em;
 }
+
+.datos-team {
+    display: none;
+    flex-direction: row;
+    width: 80vw;
+    height: 80vh;
+    background-color: #1E1E1E;
+    margin-left: 10vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 10vh;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.datos-team.mostrar {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.descriptionTeam {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logoTeam {
+    width: 100%;
+    height: 25%;
+    margin-top: 5%;
+}
+
+#logoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.textDescription {
+    text-align: center;
+    justify-content: center;
+}
+
+#textID {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.driversTeam {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.leftZone {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.rightZone {
+    width: 50%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.driverTargetOne {
+    width: 90%;
+    height: 90%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.driverImage {
+    height: 50%;
+    width: 100%;
+}
+
+.imageStyle {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.driverInfo {
+    color: black;
+    margin-left: 5%;
+}
+
+.driverNumber {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.driverName {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.7em;
+}
+
+.driverTeam {
+    margin-top: 0px;
+    font-weight: 300;
+    margin-bottom: 2.5em;
+    font-size: 1.4em;
+}

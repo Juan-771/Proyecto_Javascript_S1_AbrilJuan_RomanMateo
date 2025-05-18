@@ -13,7 +13,7 @@
         <img src="/storage/F1.svg" alt="" id="f1logo">
     </div>
     <div class="container-teams">
-        <div class="alpineTeam">
+        <div class="alpineTeam" onclick="abrirDatos()">
             <div class="superiorTeams">
                 <h3 id="teamName">Alpine</h3>
             </div>
@@ -102,5 +102,46 @@
         </div>  
 
     </div>
+    <div class="datos-team" id="datosTeam" onclick="cerrarDatos()">
+        <div class="descriptionTeam">
+            <div class="logoTeam">
+                <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/2018-redesign-assets/team%20logos/ferrari" alt="" id="logoImg">
+            </div>
+            <div class="textDescription">
+                <h3 id="textID">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+                </h3>
+            </div>
+        </div>
+        <div class="driversTeam">
+            <div class="leftZone">
+                <div class="driverTargetOne">
+                    <div class="driverImage">
+                        <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/drivers/2025Drivers/leclerc" alt="" id="driverImageSource" class="imageStyle">
+                    </div>
+                    <div class="driverInfo">
+                        <h1 class="driverNumber" id="driverNumber">16</h1>
+                        <h2 class="driverName"id="driverName">Charles Leclerc</h2>
+                        <h3 class="driverTeam" id="driverTeam">Ferrari</h3>
+                        <h2 class="driverRol" id="driverRol">Escudero</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="rightZone">
+                <div class="driverTargetOne">
+                    <div class="driverImage">
+                        <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/drivers/2025Drivers/hamilton" alt="" id="driverImageSource2" class="imageStyle">
+                    </div>
+                    <div class="driverInfo">
+                        <h1 class="driverNumber" id="driverNumber2">44</h1>
+                        <h2 class="driverName"id="driverName2">Lewis Hamilton</h2>
+                        <h3 class="driverTeam" id="driverTeam2">Ferrari</h3>
+                        <h2 class="driverRol" id="driverRol2">Lider</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="/scripts/users/teams.js"></script>
 </html>
