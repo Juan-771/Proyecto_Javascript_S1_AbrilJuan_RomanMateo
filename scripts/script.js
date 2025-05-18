@@ -5,9 +5,9 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     const password = document.getElementById("password").value
 
     if (user === "Admin" && password === "admin123" ){
-        window.location.href = "../html/adminPages/adminPrincipalPage.html";
+        window.location.href = "/html/adminPages/adminPrincipalPage.html";
     } 
     else {
-        window.location.href = "../html/userPages/teamsPage.html";
+        window.location.href = "/html/userPages/teamsPage.html";
     }
 })
