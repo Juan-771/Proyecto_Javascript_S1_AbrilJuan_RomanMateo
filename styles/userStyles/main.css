@@ -1,0 +1,124 @@
+
+
+
+@font-face {
+    font-family: 'Formula1';
+    src: url('../../fonts/Formula1-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Formula1';
+    src: url('../../fonts/Formula1-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Formula1', sans-serif;
+    margin: 0px;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: #15151E;
+    font-family: 'Formula1', sans-serif;
+    font-weight: normal;
+}
+
+.f1Logo {
+    margin-left: 2em;
+}
+
+.sections {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.welcomeSection {
+    background-color: black;
+    background-image: url('https://i.ibb.co/x8cPDXJW/fondo-Main.png'); /* reemplaza por el link directo real */
+    background-size: cover;
+    background-position: center;
+    
+    opacity: 1;
+    width: 100%;
+    height: 100vh; /* o lo que necesites */
+  }
+
+
+.blackScreen { 
+    background-color: rgba(0, 0, 0, 0.466);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.welcomeText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 10vw;
+    margin-top: 5vh;
+    margin-left: 35vw;
+    text-align: center;
+
+}
+
+#textID {
+    font-size: 5vw;
+    color: #FF1E00;
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40vw;
+    height: 10vw;
+    margin-top: 35vh;
+    margin-left: 30vw;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: normal;
+}
+
+#buttonStyle {
+    font-family: 'Formula1';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13vw;
+    height: 8vh;
+    margin-top: 55vh;
+    margin-left: 43.5vw;
+    text-align: center;
+    font-size: 2em;
+    font-weight: normal;
+    background-color: #15151E;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+.tituloHover {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: white; /* o el color que estés usando */
+  }
+
+.tituloHover:hover {
+    transform: scale(1.1);
+  }
+

@@ -8,6 +8,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         window.location.href = "./html/adminPages/adminPrincipalPage.html";
     } 
     else {
-        window.location.href = "./html/userPages/teamsPage.html";
+        window.location.href = "./html/userPages/principalPage.html";
     }
 })
