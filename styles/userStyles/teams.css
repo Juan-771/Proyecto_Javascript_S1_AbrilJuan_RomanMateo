@@ -153,7 +153,7 @@ body {
     flex-direction: row;
     width: 80vw;
     height: 80vh;
-    background-color: rgba(24, 23, 23, 0.336);
+    background-color:  rgba(24, 23, 23, 0.433);
     margin-left: 10vw;
     position: fixed;
     top: 0;
@@ -265,6 +265,8 @@ body {
     margin-bottom: 2.5em;
     font-size: 1.4em;
 }
+
+
 
 @media (max-width: 430px) {
     .container-teams {  

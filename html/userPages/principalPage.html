@@ -11,7 +11,7 @@
         <img src="../../storage/F1.svg" alt="" class="f1Logo">
         <div class="sections">
             <h1><a href="../userPages/teamsPage.html" class="tituloHover">Escuderias</a></h1>
-            <h1>Pilotos</h1>
+            <h1><a href="#pilotosSection" class="tituloHover">Pilotos</a></h1>
             <h1>Circuitos</h1>
             <h1>Vehiculos</h1>
         </div>
@@ -26,9 +26,31 @@
                     ¡Prepárate! Estás por descubrir todo sobre los equipos y circuitos de la competición más veloz del planeta.
                 </h3>
             </div>
-            <button id="buttonStyle">Descubrir</button>
+            <a href="#pilotosSection">
+                <button id="buttonStyle">Descubrir</button>
+            </a>
+            
+        </div>
+    </section>
+    <section class="pilotosSection" id="pilotosSection">
+        <div class="divTextoPilotos">
+            <h1>Pilotos</h1>
+        </div>
+        <div class="target" id="template">
+            <div class="divImagen">
+                <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/drivers/2025Drivers/verstappen" alt="" id="imagePiloto">
+            </div>
+            <div class="driverInfo">
+                <h1 class="driverNumber" id="driverNumber">01</h1>
+                <h2 class="driverName"id="driverName">Max verstappen</h2>
+                <h3 class="driverTeam" id="driverTeam">Red Bull Racing</h3>
+                <h2 class="driverRol" id="driverRol">Lider</h2>
+            </div>
         </div>
         
+        <div class="container_pilotos" id="containerPilotos">
+
+        </div>
     </section>
 </body>
 <script src="../../scripts/users/main.js"></script>

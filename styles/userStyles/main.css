@@ -1,5 +1,6 @@
-
-
+html {
+    scroll-behavior: smooth;
+  }
 
 @font-face {
     font-family: 'Formula1';
@@ -19,6 +20,7 @@ body {
     font-family: 'Formula1', sans-serif;
     margin: 0px;
     color: white;
+    background-color: #15151E;
 }
 
 header {
@@ -29,6 +31,11 @@ header {
     font-weight: normal;
 }
 
+a {
+    all: unset;
+    cursor: pointer;
+  }
+
 .f1Logo {
     margin-left: 2em;
 }
@@ -36,8 +43,6 @@ header {
 .sections {
     width: 80%;
     margin-left: 10%;
-    display: flex;
-    flex-direction: row;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
@@ -109,6 +114,13 @@ header {
     color: white;
     border: none;
     border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#buttonStyle:hover {
+    transform: scale(1.1);
+    background-color: #FF1E00;
 }
 
 .tituloHover {
@@ -122,3 +134,171 @@ header {
     transform: scale(1.1);
   }
 
+.pilotosSection {
+    background-color: #15151E;
+}
+
+.target {
+    width: 16vw;
+    height: 60vh    ;
+    border: 1px solid black;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    cursor: pointer;
+    color: black
+}
+
+.target:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+  }
+
+
+.divImagen {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+#imagePiloto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.driverInfo {
+    margin-left: 5%;
+}
+
+.driverNumber {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.driverName {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.7em;
+}
+
+.driverTeam {
+    margin-top: 0px;
+    font-weight: 300;
+    margin-bottom: 2.5em;
+    font-size: 1.2em;
+}
+
+.container_pilotos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-left: 6vw;
+        margin-top: 3vh;
+        gap: 3em;
+        margin-bottom: 5vh;
+}
+
+.divTextoPilotos {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    background: linear-gradient(to bottom, #000000, #15151E);
+
+}
+
+@media (max-width: 430px) {
+    header {
+        font-size: 1em;
+    }
+
+    .f1Logo {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        width: 5em;
+    }
+
+    .sections {
+        width: 80vw;
+        margin-left: 5%;
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .welcomeText {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 10vw;
+        margin-top: 5vh;
+        margin-left: 0vw;
+        text-align: center;
+    
+    }
+
+    #textID {
+        font-size: 3em;
+        color: #FF1E00;
+    }
+
+    .description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40vw;
+        height: 10vw;
+        margin-top: 20vh;
+        margin-left: 30vw;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    #buttonStyle {
+        font-family: 'Formula1';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 43vw;
+        height: 8vh;
+        margin-top: 70vh;
+        margin-left: 30vw;
+        text-align: center;
+        font-size: 2em;
+        font-weight: normal;
+        background-color: #15151E;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .container_pilotos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 2vw;
+        margin-top: 3vh;
+        gap: 1em;
+        margin-bottom: 5vh;
+}
+.target {
+    width: 100%;
+    height: 60vh    ;
+    border: 1px solid black;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    cursor: pointer;
+    color: black;
+}
+}
