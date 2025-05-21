@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../styles/adminStyles/admin.css">
 </head>
 <body>
-    soy admin
+    <div class="divSuperior">
+        <a href="../../index.html">
+            <img src="../../storage/arrow-ios-back-svgrepo-com.svg" alt="" id="back">
+        </a>
+        <h1>Administrador</h1>
+        <img src="../../storage/F1.svg" alt="" id="f1logo">
+    </div>
+    <div class="principal">
+        <div class="principalEscuderia">
+            <div class="encabezadoEscuderias">
+                <h2>Escuderias</h2>
+            </div>
+            <div class="adminEscuderias" id="containerEscuderia">
+                <div class="cajonEscuderia" id="templateEscuderia">
+                    <div class="divDatos">
+                        <div class="divImagenEscuderia">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/2018-redesign-assets/team%20logos/ferrari" alt="" id="logoEscuderia">
+                        </div>
+                        <div class="divNombreEscuderia">
+                            <h2 id="nombreEscuderia">Escuderia Ferrari</h2>
+                        </div>
+                        <div class="divCarroEscuderia">
+                            <img src="https://i.ibb.co/KxvPwbrj/Image8.png" alt="" id="carEscuderia">
+                        </div>
+                    </div>
+                    <div class="divBotones">
+                        <div class="divBotonIzquierdo">
+                            <button class="botonActualizar">Actualizar</button>
+                        </div>
+                        <div class="divBotonDerecho">
+                            <button class="botonEliminar" id="eliminar">Eliminar</button>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        
+        
+    </div>
 </body>
+<script src="../../scripts/admin/admin.js"></script>
 </html>

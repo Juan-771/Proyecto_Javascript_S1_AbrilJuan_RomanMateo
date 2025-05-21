@@ -93,10 +93,13 @@ a:hover img{
     position: fixed;
     display: flex;
     flex-direction: row;
-    border-radius: 40px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #FF1E00, #15151E);
+    border-image-slice: 1;
+    
 }
 
 .carDetailed.mostrar {
