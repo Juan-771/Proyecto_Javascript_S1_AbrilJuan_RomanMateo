@@ -1,5 +1,5 @@
 async function abrirDatos(team) {
-    llamadaAPI(team)
+    await llamadaAPI(team)
     document.getElementById("datosTeam").classList.add("mostrar");    
 }
 
@@ -12,7 +12,7 @@ async function abrirDatos(team) {
     let data = await response.json()
     
 
-   data.forEach(element  => {
+    data.forEach(element  => {
       if (team === element.team){
         document.getElementById("logoImg").src = element.logoImage
         document.getElementById("textID").textContent = element.description

@@ -15,8 +15,9 @@
 body {
     font-family: 'Formula1', sans-serif;
     margin: 0px;
-    background-color: #15151E;
+    background: linear-gradient(to bottom, #000000, #15151E);
     color: white;
+    height: 100vh;
 }
 
 .divSuperior {
@@ -42,6 +43,7 @@ body {
     gap: 3em;
     width: 80%;
     margin-left: 7%;
+
 }
 
 .alpineTeam {

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/userStyles/vehiculos.css">
+</head>
+<body>
+    <div class="divSuperior">
+        <a href="../userPages/principalPage.html">
+            <img src="../../storage/arrow-ios-back-svgrepo-com.svg" alt="" id="back">
+        </a>
+        <h1>Monoplazas</h1>
+        <img src="../../storage/F1.svg" alt="" id="f1logo">
+    </div>
+    <div class="divPrincipal" id="containerVehiculos">
+        <div class="divCarro" id="template">
+            <div class="cajonNombre">
+                <h1 id="modelo">W16</h1>
+            </div>
+            <div class="cajonImagen" onclick="abrirDatos()">
+                <img src="https://i.ibb.co/MDh2wgyg/Image1.png" alt="" id="imgVehiculo">
+            </div>    
+        </div>
+    </div>
+    <div class="carDetailed" id="tarjetaDetallada"  onclick=" cerrarDatos()">
+        <div class="ladoIzquierdo">
+            <div class="divTexto">
+                <h1>RB-21
+                    RED BULL RACING
+                </h1>
+            </div>
+            <div class="abajoIzquierda">
+                <div class="generalDatos">
+                    <div class="izquierdaDatos">
+                        <div class="izquierdaArribaDatos">
+                            <div class="contenidos">
+                                <h1>Motor</h1>
+                                <div class="datos">
+                                    <h2>Honda RBPTH003</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="izquierdaArribaDatos">
+                            <div class="contenidos">
+                                <h1>Aceleracion</h1>
+                                <div class="datos">
+                                    <h2>0 a 100 km/h: 2.4 s</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="izquierdaDatos">
+                        <div class="izquierdaArribaDatos">
+                            <div class="contenidos">
+                                <h1>Velocidad Maxima</h1>
+                                <div class="datos">
+                                    <h2>340 km/h</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="izquierdaArribaDatos">
+                            <div class="contenidos">
+                                <h1>Motor</h1>
+                                <div class="datos">
+                                    <h2>Honda RBPTH003</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ladoDerecho">
+            <div class="arribaDerecha">
+                <div class="divLogo">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/2018-redesign-assets/team%20logos/ferrari" alt="" id="logoEquipo">
+                </div>
+            </div>
+            <div class="abajoDerecha">
+                <div class="divVehiculo">
+                    <img src="https://i.ibb.co/YBCkJyPc/Image4.png" alt="" id="imgVehiculo">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../scripts/users/vehiculos.js"></script>
+</html>

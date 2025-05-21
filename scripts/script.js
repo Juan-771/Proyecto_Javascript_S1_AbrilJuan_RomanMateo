@@ -4,6 +4,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     const user = document.getElementById("user").value
     const password = document.getElementById("password").value
 
+    localStorage.setItem("usuario", user);
+
     if (user === "Admin" && password === "admin123" ){
         window.location.href = "./html/adminPages/adminPrincipalPage.html";
     } 
