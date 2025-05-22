@@ -27,7 +27,7 @@ llamadaAPI()
 
 async function abrirDatos(idVehiculo) {
     console.log(idVehiculo)
-    infoDetallada(idVehiculo) 
+    await infoDetallada(idVehiculo) 
     document.getElementById("tarjetaDetallada").classList.add("mostrar");    
 }
 

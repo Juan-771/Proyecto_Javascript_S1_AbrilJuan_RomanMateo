@@ -77,6 +77,12 @@ a:hover img{
     cursor: pointer;
 }
 
+#imgVehiculoAfuera {
+    width: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
 .cajonImagen:hover{
     transform: scale(1.05);
 }

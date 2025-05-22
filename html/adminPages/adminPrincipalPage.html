@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Administrador page</title>
     <link rel="stylesheet" href="../../styles/adminStyles/admin.css">
 </head>
 <body>
@@ -15,6 +15,8 @@
         <img src="../../storage/F1.svg" alt="" id="f1logo">
     </div>
     <div class="principal">
+
+        <!-- Contenedor de escuderia y su respectivo panel de agregar -->
         <div class="principalEscuderia">
             <div class="encabezadoEscuderias">
                 <h2>Escuderias</h2>
@@ -34,7 +36,7 @@
                     </div>
                     <div class="divBotones">
                         <div class="divBotonIzquierdo">
-                            <button class="botonActualizar">Actualizar</button>
+                            <button class="botonActualizar" id="actualizar">Actualizar</button>
                         </div>
                         <div class="divBotonDerecho">
                             <button class="botonEliminar" id="eliminar">Eliminar</button>
@@ -42,9 +44,205 @@
                     </div>
                 </div>  
             </div>
+            <div class="divBoton">
+                <button id="agregar" onclick="agregarEscuderia()">Agregar</button>
+            </div>
         </div>
-        
-        
+        <div class="agregarEscuderia" id="agregarEscuderiaDiv">
+            <div class="divSuperiorAgregar">
+                <a id="volver" onclick="cerrarDatos()">
+                    <img src="../../storage/arrow-ios-back-svgrepo-com.svg" alt="" id="back">
+                </a>
+                <h1>Agregar Escuderia</h1>
+            </div>
+            <div class="divDatosEscuderia">
+                <div class="cajonAgregar">
+                        <h2>Nombre escuderia</h2>
+                        <input type="text" class="inputStyle" id="inputNombreEscuderia">
+                    
+                </div>
+                <div class="cajonAgregar">
+                    <h2>Enlace del logo</h2>
+                    <input type="text" class="inputStyle" id="inputLogoEscuderia">
+                </div>
+                <div class="cajonAgregar">
+                    <h2>Descripcion</h2>
+                    <input type="text" class="inputStyle" id="inputDescripcionEscuderia">
+                </div>
+                <div class="cajonAgregar">
+                    <h2>Enlace del monoplaza</h2>
+                    <input type="text" class="inputStyle" id="inputCarroEscuderia">
+                </div>
+            </div>
+            <div class="divBotonAgregar">
+                <button id="agregarEscuderia">Agregar</button>
+            </div>
+
+        </div>
+
+        <!-- Contenedor de pilotos y su respectivo panel de agregar --> 
+        <div class="principalPilotos">
+            <div class="encabezadoEscuderias">
+                <h2>Pilotos</h2>
+            </div>
+            <div class="adminEscuderias" id="containerPilotos">
+                <div class="cajonEscuderia" id="templatePiloto">
+                    <div class="divDatos">
+                        <div class="divImagenPiloto">
+                            <img src="https://www.banderas-mundo.es/data/flags/h80/at.webp" alt="" id="banderaPiloto">
+                        </div>
+                        <div class="divNumeroPiloto">
+                            <h2 id="numeroPiloto">1</h2>
+                        </div>
+                        <div class="divNombrePiloto">
+                            <h2 id="nombrePiloto">Max Verstappen</h2>
+                        </div>
+                        <div class="divImagenPilotoPic">
+                            <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/content/dam/fom-website/drivers/2025Drivers/verstappen" alt="" id="picturePiloto">
+                        </div>
+                        <div class="divRolPiloto">
+                            <h2 id="rolPiloto">Lider</h2>
+                        </div>
+                    </div>
+                    <div class="divBotones">
+                        <div class="divBotonIzquierdo">
+                            <button class="botonActualizar" id="actualizarPiloto">Actualizar</button>
+                        </div>
+                        <div class="divBotonDerecho">
+                            <button class="botonEliminar" id="eliminarPiloto">Eliminar</button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="divBoton">
+                <button id="agregarPilotoBoton" onclick="agregarPiloto()">Agregar</button>
+            </div> 
+        </div>
+
+        <div class="agregarPiloto" id="agregarPilotoDiv">
+            <div class="divSuperiorAgregar">
+                <a id="volver" onclick="cerrarDatosPiloto()">
+                    <img src="../../storage/arrow-ios-back-svgrepo-com.svg" alt="" id="back">
+                </a>
+                <h1>Agregar piloto</h1>
+            </div>
+            <div class="divDatosPilotos">
+                <div class="cajonAgregarPilotos">
+                    <h2>Nombre piloto</h2>
+                    <input type="text" class="inputStyle" id="inputNombrePiloto">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Escuderia piloto</h2>
+                    <input type="text" class="inputStyle" id="inputEscuderiaPiloto">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Rol piloto</h2>
+                    <input type="text" class="inputStyle" id="inputRolPiloto">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Numero piloto</h2>
+                    <input type="text" class="inputStyle" id="inputNumeroPiloto">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Foto piloto</h2>
+                    <input type="text" class="inputStyle" id="inputFotoPiloto">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Fecha nacimiento</h2>
+                    <input type="text" class="inputStyle" id="inputFechaNacimiento">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Descripcion</h2>
+                    <input type="text" class="inputStyle" id="inputDescripcionPiloto">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Imagen bandera</h2>
+                    <input type="text" class="inputStyle" id="inputImagenBandera">
+                </div>
+            </div>
+            <div class="divBotonAgregarPiloto">
+                <button id="agregarPiloto">Agregar</button>
+            </div>
+        </div>
+
+        <!-- Contenedor de monoplazas y su respectivo panel de agregar --> 
+        <div class="principalPilotos">
+            <div class="encabezadoEscuderias">
+                <h2>Monoplazas</h2>
+            </div>
+            <div class="adminEscuderias" id="containerMonoplazas">
+                <div class="cajonEscuderia" id="templateMonoplaza">
+                    <div class="divDatos">
+                        <div class="divImagenMonoplaza">
+                            <img src="https://i.ibb.co/MDh2wgyg/Image1.png" alt="" id="monoplazaImagen">
+                        </div>
+                        <div class="divModeloMonoplaza">
+                            <h2 id="modeloMonoplaza">Mercedes W16</h2>
+                        </div>
+                        <div class="divMotorMonoplaza">
+                            <h2 id="monoplazaMotor">Mercedes-AMG F1 M16 E Performance</h2>
+                        </div>
+                    </div>
+                    <div class="divBotones">
+                        <div class="divBotonIzquierdo">
+                            <button class="botonActualizar" id="actualizarMonoplaza">Actualizar</button>
+                        </div>
+                        <div class="divBotonDerecho">
+                            <button class="botonEliminar" id="eliminarMonoplaza">Eliminar</button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="divBoton">
+                <button id="agregarMonoplazaBoton" onclick="agregarMonoplaza()">Agregar</button>
+            </div> 
+        </div>
+
+        <div class="agregarMonoplaza" id="agregarMonoplazaDiv">
+            <div class="divSuperiorAgregar">
+                <a id="volver" onclick="cerrarDatosMonoplaza()">
+                    <img src="../../storage/arrow-ios-back-svgrepo-com.svg" alt="" id="back">
+                </a>
+                <h1>Agregar monoplaza</h1>
+            </div>
+            <div class="divDatosPilotos">
+                <div class="cajonAgregarPilotos">
+                    <h2>Modelo</h2>
+                    <input id="inputModeloMonoplaza" type="text" class="inputStyle">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Imagen monoplaza</h2>
+                    <input id="inputImagenMonoplaza" type="text" class="inputStyle">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Nombre</h2>
+                    <input id="inputNombreMonoplaza" type="text" class="inputStyle">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Motor</h2>
+                    <input id="inputMotorMonoplaza" type="text" class="inputStyle">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Velocidad máxima</h2>
+                    <input id="inputVelocidadMonoplaza" type="text" class="inputStyle">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Aceleración</h2>
+                    <input id="inputAceleracionMonoplaza" type="text" class="inputStyle">
+                </div>
+                <div class="cajonAgregarPilotos">
+                    <h2>Potencia máxima</h2>
+                    <input id="inputPotenciaMonoplaza" type="text" class="inputStyle">
+                </div>
+                    <div class="cajonAgregarPilotos">
+                    <h2>Logo imagen</h2>
+                    <input id="inputLogoMonoplaza" type="text" class="inputStyle">
+                </div>
+            </div>
+            <div class="divBotonAgregarPiloto">
+                <button id="agregarMonoplaza">Agregar</button>
+            </div>
+        </div>
     </div>
 </body>
 <script src="../../scripts/admin/admin.js"></script>

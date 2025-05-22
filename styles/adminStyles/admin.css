@@ -17,7 +17,7 @@ body {
     margin: 0px;
     background: linear-gradient(to bottom, #000000, #15151E);
     color: white;
-    height: 100vh;
+    
 }
 
 .divSuperior {
@@ -48,13 +48,14 @@ a:hover img{
 .principal {
     width: 100vw;
     display: flex;
-    justify-content: center;
     margin-top: 3em;
+    flex-direction: column;
+
+    align-items: center;
 }
 
 .principalEscuderia{
     width: 80%;
-   
     display: flex;
     flex-direction: column;
   
@@ -145,6 +146,7 @@ a:hover img{
     background-color: rgb(0, 85, 255);
     border: none;
     color: white;
+    transition: transform 0.2s ease;
 }
 
 .divBotonDerecho {
@@ -160,4 +162,314 @@ a:hover img{
     background-color: red;
     border: none;
     color: white;
+    transition: transform 0.2s ease;
+}
+
+.divBoton {
+    margin-top: 1vh;
+    width: 100%;
+    height: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#agregar {
+    background-color: rgb(40, 158, 10);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+.agregarEscuderia {
+    width: 80vw;
+    height: 80vh;
+    margin-left: 10vw;
+    top: 0;
+    left: 0;
+    margin-top: 10vh;
+    position: fixed;
+    background-color:  rgba(0, 0, 0, 0.836);
+    backdrop-filter: blur(10px);
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #FF1E00, #15151E);
+    border-image-slice: 1;
+    opacity: 0;
+pointer-events: none;
+transition: opacity 0.3s ease;
+}
+
+.agregarEscuderia.mostrar {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.divSuperiorAgregar {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.divDatosEscuderia {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 columnas iguales */
+    grid-template-rows: 1fr 1fr;
+}
+
+.cajonAgregar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cajonAgregar h2 {
+    font-weight: 300;
+    font-size: 2em;
+    margin-top: 0px;
+}
+
+
+.inputStyle {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    color: white;
+    outline: none;  
+    margin-top: 1em;
+}
+
+.divBotonAgregar {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#agregarEscuderia {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* CSS DE LA PARTE DE PILOTOS */
+
+.principalPilotos{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;  
+    margin-bottom: 5em; 
+}
+
+#banderaPiloto {
+    width: 90%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.divImagenPiloto {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.divNumeroPiloto {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.divNombrePiloto {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.divImagenPilotoPic {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#picturePiloto {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.divRolPiloto {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agregarPiloto {
+    width: 80vw;
+    height: 80vh;
+    margin-left: 10vw;
+    top: 0;
+    left: 0;
+    margin-top: 10vh;
+    position: fixed;
+    background-color:  rgba(0, 0, 0, 0.836);
+    backdrop-filter: blur(10px);
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #FF1E00, #15151E);
+    border-image-slice: 1;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.agregarPiloto.mostrar {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.divDatosPilotos {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 columnas */
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cajonAgregarPilotos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.divBotonAgregarPiloto {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#agregarPiloto {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+    
+}
+
+#agregarPilotoBoton {
+    background-color: rgb(40, 158, 10);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* CSS de lo relacionado a las monoplazas */
+
+.divImagenMonoplaza {
+    width: 25%;
+    height: 100%;
+    display: flex;    
+    align-items: center;
+}
+
+#monoplazaImagen {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.divModeloMonoplaza {
+    width: 35%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.divMotorMonoplaza {
+    width: 40%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+}
+
+#agregarMonoplazaBoton {
+    background-color: rgb(40, 158, 10);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.agregarMonoplaza {
+    width: 80vw;
+    height: 80vh;
+    margin-left: 10vw;
+    top: 0;
+    left: 0;
+    margin-top: 10vh;
+    position: fixed;
+    background-color:  rgba(0, 0, 0, 0.836);
+    backdrop-filter: blur(10px);
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #FF1E00, #15151E);
+    border-image-slice: 1;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.agregarMonoplaza.mostrar {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#agregarMonoplaza {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
 }
