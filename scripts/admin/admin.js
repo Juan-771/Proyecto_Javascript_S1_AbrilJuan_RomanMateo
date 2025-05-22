@@ -269,8 +269,8 @@ function mostrarMonoplazas(data){
         clone.querySelector("#eliminarMonoplaza").addEventListener("click", eliminarMonoplaza);
 
 
-        // clone.querySelector("#actualizarPiloto").setAttribute("data-id", piloto["id"]);
-        // clone.querySelector("#actualizarPiloto").addEventListener("click", actualizarPiloto);
+        // clone.querySelector("#actualizarMonoplaza").setAttribute("data-id", monoplaza["id"]);
+        // clone.querySelector("#actualizarMonoplaza").addEventListener("click", actualizarMonoplaza);
 
         container.appendChild(clone);
     });
