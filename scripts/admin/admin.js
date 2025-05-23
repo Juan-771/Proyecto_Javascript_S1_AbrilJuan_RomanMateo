@@ -21,7 +21,7 @@ function mostrarEscuderias(data){
         clone.style.display = "flex"
         clone.querySelector("#logoEscuderia").src = escuderia.logoImage;
         clone.querySelector("#nombreEscuderia").textContent = escuderia.team;
-        // clone.querySelector("#carEscuderia").src = escuderia.car
+        clone.querySelector("#carEscuderia").src = escuderia.monoplaza
 
         clone.querySelector("#eliminar").setAttribute("data-id", escuderia["id"]);
         clone.querySelector("#eliminar").addEventListener("click", eliminarEscuderia);
@@ -269,8 +269,8 @@ function mostrarMonoplazas(data){
         clone.querySelector("#eliminarMonoplaza").addEventListener("click", eliminarMonoplaza);
 
 
-        // clone.querySelector("#actualizarMonoplaza").setAttribute("data-id", monoplaza["id"]);
-        // clone.querySelector("#actualizarMonoplaza").addEventListener("click", actualizarMonoplaza);
+        clone.querySelector("#actualizarMonoplaza").setAttribute("data-id", monoplaza["id"]);
+        clone.querySelector("#actualizarMonoplaza").addEventListener("click", actualizarMonoplaza);
 
         container.appendChild(clone);
     });
@@ -313,6 +313,41 @@ document.getElementById("agregarMonoplaza").addEventListener("click", async () =
 });
 }
 
+async function actualizarMonoplaza(evento) {
+    alert("Vamos a actualizar los datos del monoplaza");
+
+    const modelo = prompt("¿Cuál es el nuevo modelo del monoplaza?");
+    const imagen = prompt("Enlace de la nueva imagen del monoplaza:");
+    const nombre = prompt("Nuevo nombre del monoplaza:");
+    const motor = prompt("Tipo de motor:");
+    const velocidad_max = prompt("Velocidad máxima (ej: 350 km/h):");
+    const aceleracion = prompt("Aceleración (ej: 0-100 km/h en segundos):");
+    const potencia_max = prompt("Potencia máxima (ej: 1000 HP):");
+    const logoEscuderia = prompt("Enlace del logo de la escudería:");
+
+    const id = evento.currentTarget.getAttribute("data-id");
+
+    await fetch(`https://682c6e77d29df7a95be708c2.mockapi.io/api/f1/cars/${id}`, {
+        method: "PUT",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+        modelo,
+        imagen,
+        nombre,
+        motor,
+        velocidad_max,
+        aceleracion,
+        potencia_max,
+        logoEscuderia
+        })
+    });
+
+    alert("✅ Monoplaza actualizado exitosamente.");
+    llamadaAPIMonoplazas(); // Asegúrate de que esta función recargue los monoplazas
+}
+
 function cerrarDatosMonoplaza() {
     document.getElementById("agregarMonoplazaDiv").classList.remove("mostrar");
 }
@@ -325,4 +360,141 @@ async function eliminarMonoplaza(evento){
         method: "DELETE",
     });
     llamadaAPIMonoplazas();
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////         CRUD Circuitos                                                            ////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+async function llamadaAPICircuitos(){
+    let response = await fetch("https://68179af726a599ae7c3ae473.mockapi.io/circuitos")
+    let data = await response.json()
+
+    mostrarCircuitos(data)
+
+}
+
+function mostrarCircuitos(data){
+    const template = document.getElementById("templateCircuito");
+    const container = document.getElementById("container_circuitos");
+    container.innerHTML = ""; // limpia antes de insertar
+
+    data.forEach(circuito => {
+        const clone = template.cloneNode(true);
+        clone.style.display = "flex"
+        clone.querySelector("#imagenCircuito").src = circuito.imagen
+        clone.querySelector("#nombreCircuito").textContent = circuito.nombre
+        clone.querySelector("#paisCircuito").textContent = circuito.pais
+
+        clone.querySelector("#eliminarCircuito").setAttribute("data-id", circuito["id"]);
+        clone.querySelector("#eliminarCircuito").addEventListener("click", eliminarCircuito);
+
+
+        clone.querySelector("#actualizarCircuito").setAttribute("data-id", circuito["id"]);
+        clone.querySelector("#actualizarCircuito").addEventListener("click", actualizarCircuito);
+
+        container.appendChild(clone);
+    });
+}
+
+llamadaAPICircuitos()
+
+async function eliminarCircuito(evento){
+    let id = evento.currentTarget.getAttribute("data-id");
+    console.log(id);
+
+    await fetch(`https://68179af726a599ae7c3ae473.mockapi.io/circuitos/${id}`, {
+        method: "DELETE",
+    });
+    llamadaAPICircuitos();
+}
+
+async function agregarCircuito() {
+document.getElementById("agregarCircuitoDiv").classList.add("mostrar");
+
+    document.getElementById("agregarCircuito").addEventListener("click", async () => {
+    const nombre = document.getElementById("inputNombreCircuito").value;
+    const pais = document.getElementById("inputPaisCircuito").value;
+    const longitud = document.getElementById("inputLongitudCircuito").value;
+    const curvas = document.getElementById("inputCurvasCircuito").value;
+    const record = document.getElementById("inputRecordCircuito").value;
+    const imagenReal = document.getElementById("inputImagenCircuito").value;
+    const imagen = imagenReal
+    const descripcion = document.getElementById("inputDescripcionCircuito").value;
+    const bandera = document.getElementById("inputBanderaCircuito").value;
+
+    await fetch("https://68179af726a599ae7c3ae473.mockapi.io/circuitos", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+        nombre,
+        pais,
+        longitud,
+        curvas,
+        record,
+        imagenReal,
+        imagen,
+        descripcion,
+        bandera
+        })
+    });
+
+    cerrarDatosCircuito();  
+    llamadaAPICircuitos();  
+    });
+}
+
+async function actualizarCircuito(evento) {
+    alert("Vamos a actualizar el nombre del circuito");
+    const nombre = prompt("¿Cuál será el nuevo nombre del circuito?");
+
+    alert("¿En qué país se encuentra el circuito?");
+    const pais = prompt("Nombre del país:");
+
+    alert("Actualicemos la longitud del circuito (en km o metros)");
+    const longitud = prompt("¿Cuál es la longitud del circuito?");
+
+    alert("Ahora las curvas del circuito");
+    const curvas = prompt("¿Cuántas curvas tiene el circuito?");
+
+    alert("¿Cuál es el récord actual del circuito?");
+    const record = prompt("Tiempo del récord (ej: 1:15.123)");
+
+    alert("Proporciona el nuevo enlace de la imagen del circuito");
+    const imagenReal = prompt("Enlace de la imagen del circuito");
+    const imagen = imagenReal
+    alert("Describe brevemente el circuito");
+    const descripcion = prompt("Nueva descripción del circuito");
+
+    alert("Proporciona el nuevo enlace de la bandera del país del circuito");
+    const bandera = prompt("Enlace de la imagen de la bandera");
+
+    const id = evento.currentTarget.getAttribute("data-id");
+
+    await fetch(`https://68179af726a599ae7c3ae473.mockapi.io/circuitos/${id}`, {
+        method: "PUT",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+        nombre,
+        pais,
+        longitud,
+        curvas,
+        record,
+        imagenReal,
+        imagen,
+        descripcion,
+        bandera
+        })
+    });
+
+    alert("✅ Circuito actualizado exitosamente.");
+  llamadaAPICircuitos(); // Asegúrate de tener esta función definida
+}
+
+function cerrarDatosCircuito() {
+    document.getElementById("agregarCircuitoDiv").classList.remove("mostrar");
 }

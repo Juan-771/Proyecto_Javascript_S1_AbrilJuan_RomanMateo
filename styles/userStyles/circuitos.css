@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'Formula1';
+    src: url('../../fonts/Formula1-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Formula1';
+    src: url('../../fonts/Formula1-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Formula1', sans-serif;
+    color: white;
+    background: radial-gradient(circle, #121d31 10%, #15151E 60%) fixed;
+    margin: 0;
+    min-height: 100vh; /* Opcional: cubre toda la pantalla inicial */
+}
+
+.divSuperior {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+}
+
+#back {
+    width: 4vw;
+}
+
+#f1logo {
+    margin-left: auto;
+    margin-right: 2em;
+}
+
+a img {
+    border: none;
+    display: block; /* evita espacios raros en línea */
+    transition: transform 0.3s ease;
+}
+
+a:hover img{
+    transform: scale(1.05); /* Aumenta el tamaño un 5% */
+}
+
+.tarjetaCircuito {
+    width: 20vw;
+    height: 60vh;
+    display: none;
+    flex-direction: column;
+    color: white;
+    background-color:  #151a267a;
+    backdrop-filter: blur(10px);
+    margin-left: 5vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.tarjetaCircuito:hover{
+    transform: scale(1.05);
+    background-color: #121d31;
+    backdrop-filter: blur(10px);
+}
+
+.divImagen {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: flex-start;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#imagenCircuito {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.divTextos {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divTextos h1 {
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+
+}
+
+.divTextos h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-top: 0px;
+}
+
+.divTextos h4 {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.container_pistas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.infoDetailed {
+    width: 80vw;
+    height: 80vh;
+    margin-left: 10vw;
+    top: 0;
+    left: 0;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background-color:  rgba(17, 16, 16, 0.795);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.infoDetailed.mostrar {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.izquierdaDetailed {
+    width: 60%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+
+.superiorIzquierda {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.inferiorIzquierda {
+    width: 90%;
+    height: 65%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+#descripcion {
+    font-weight: 300;
+}
+
+
+.divNombreCircuito {
+    width: 90%;
+    margin-left: 5%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+}
+
+.divNombreReal {
+    display: flex;
+    flex-direction: column;
+}
+
+#nombreCircuitoDetailed {
+    margin-top: auto;
+    font-size: 2.3em;
+
+}
+
+.divBanderaPadre {
+    width: 10%;
+    height: 100%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#banderaDetailed {
+    width: 80%;
+    height: 35%;
+    object-fit: cover;
+    margin-top: 60%;
+}
+
+.divPaisCircuito {
+    height: 40%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#paisDetailed {
+    margin-top: 0px;
+    font-weight: 300;
+    font-size: 1.7em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.derechaDetailed {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.superiorDerecha {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.divImagenCircuito {
+    width: 90%;
+    height: 80%;
+    margin-top: auto;
+}
+
+#imagenDetailedCircuito {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.divDatosDetailed {
+    width: 90%;
+    margin-left: 5%;
+}
+
+#curvas {
+    font-weight: 300;
+}
+#record {
+    font-weight: 300;
+}
+#longitud {
+    font-weight: 300;
+}

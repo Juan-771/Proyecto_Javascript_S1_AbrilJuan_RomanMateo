@@ -243,6 +243,94 @@
                 <button id="agregarMonoplaza">Agregar</button>
             </div>
         </div>
+
+        <!-- Contenedor de circuitos y su respectivo panel de agregar -->
+        
+        <div class="principalPilotos">
+            <div class="encabezadoEscuderias">
+                <h2>Circuitos</h2>
+            </div>
+            <div class="adminEscuderias" id="container_circuitos">
+                <div class="cajonEscuderia" id="templateCircuito">
+                    <div class="divDatos">
+                        <div class="divImagenCircuito">
+                            <img src="https://e00-marca.uecdn.es/deporte/motor/formula1/img/circuitos/monaco.jpg" alt="" id="imagenCircuito">
+                        </div>
+                        <div class="divNombreCircuito">
+                            <h2 id="nombreCircuito">Shanghai International Circuit</h2>
+                        </div>
+                        <div class="divPaisCircuito">
+                            <h2 id="paisCircuito">México</h2>
+                        </div>
+                    </div>
+                    <div class="divBotones">
+                        <div class="divBotonIzquierdo">
+                            <button class="botonActualizar" id="actualizarCircuito">Actualizar</button>
+                        </div>
+                        <div class="divBotonDerecho">
+                            <button class="botonEliminar" id="eliminarCircuito">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divBoton">
+                <button id="agregarCircuitoBoton" onclick="agregarCircuito()">Agregar</button>
+            </div> 
+        </div>
+        
+        <div class="agregarCircuitoDetailed" id="agregarCircuitoDiv">
+            <div class="divSuperiorAgregar">
+                <a id="volver" onclick="cerrarDatosCircuito()">
+                    <img src="../../storage/arrow-ios-back-svgrepo-com.svg" alt="" id="back">
+                </a>
+                <h1>Agregar Circuito</h1>
+            </div>
+            <div class="divDatosPilotos">
+                <div class="cajonAgregarPilotos">
+                    <h2>Nombre</h2>
+                    <input id="inputNombreCircuito" type="text" class="inputStyle">
+                </div>
+
+                <div class="cajonAgregarPilotos">
+                    <h2>País</h2>
+                    <input id="inputPaisCircuito" type="text" class="inputStyle">
+                </div>
+
+                <div class="cajonAgregarPilotos">
+                    <h2>Longitud</h2>
+                    <input id="inputLongitudCircuito" type="text" class="inputStyle">
+                </div>
+
+                <div class="cajonAgregarPilotos">
+                    <h2>Curvas</h2>
+                    <input id="inputCurvasCircuito" type="text" class="inputStyle">
+                </div>
+
+                <div class="cajonAgregarPilotos">
+                    <h2>Récord</h2>
+                    <input id="inputRecordCircuito" type="text" class="inputStyle">
+                </div>
+
+                <div class="cajonAgregarPilotos">
+                    <h2>Imagen</h2>
+                    <input id="inputImagenCircuito" type="text" class="inputStyle">
+                </div>
+
+                <div class="cajonAgregarPilotos">
+                    <h2>Descripción</h2>
+                    <input id="inputDescripcionCircuito" type="text" class="inputStyle">
+                </div>
+
+                <div class="cajonAgregarPilotos">
+                    <h2>Bandera</h2>
+                    <input id="inputBanderaCircuito" type="text" class="inputStyle">
+                </div>
+            </div>
+            <div class="divBotonAgregarPiloto">
+                <button id="agregarCircuito">Agregar</button>
+            </div>
+        </div>
+
     </div>
 </body>
 <script src="../../scripts/admin/admin.js"></script>

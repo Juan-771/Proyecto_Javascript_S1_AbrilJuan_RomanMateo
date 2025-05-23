@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuitos</title>
+    <link rel="stylesheet" href="../../styles/userStyles/circuitos.css">
+</head>
+<body>
+    <div class="divSuperior">
+        <a href="../userPages/principalPage.html">
+            <img src="../../storage/arrow-ios-back-svgrepo-com.svg" alt="" id="back">
+        </a>
+        <h1>Circuitos</h1>
+        <img src="../../storage/F1.svg" alt="" id="f1logo">
+    </div>
+
+    <div class="tarjetaCircuito" id="template">
+        <div class="divImagen">
+            <img src="https://media.losandes.com.ar/p/5d58e61a856dc0249aeef779e11bdee9/adjuntos/368/imagenes/100/624/0100624396/1200x675/smart/gran-premio-monaco-la-formula-1.png" alt="" id="imagenCircuito">
+        </div>
+        <div class="divTextos">
+            <h1 id="nombreCircuito">Monaco</h1>
+            <h3 id="paisCircuito">Francia</h3>
+            <h4 id="longitudCircuito">5,431 Km</h4>
+        </div>
+    </div>
+
+    <div class="container_pistas" id="containerCircuitos">
+    </div>
+
+    <div class="infoDetailed" id="tarjetaDetallada" onclick="cerrarDatos()">
+        <div class="izquierdaDetailed">
+            <div class="superiorIzquierda">
+                <div class="divNombreCircuito">
+                    <div class="divNombreReal">
+                        <h1 id="nombreCircuitoDetailed">Autódromo Hermanos Rodríguez</h1>
+                    </div>
+                    <div class="divBanderaPadre">
+                        <img src="https://www.banderas-mundo.es/data/flags/h80/jp.webp" alt="" id="banderaDetailed">
+                    </div>
+                </div>
+                <div class="divPaisCircuito">
+                    <h2 id="paisDetailed">México</h2>
+                </div>
+            </div>
+            <div class="inferiorIzquierda">
+                <h2 id="descripcion">Ubicado en la Ciudad de México, el Autódromo Hermanos Rodríguez es uno de los circuitos más emblemáticos del automovilismo mundial. Inaugurado en 1959, ha sido sede de numerosos eventos internacionales, incluyendo la Fórmula 1, la Fórmula E y múltiples competencias de motociclismo y automovilismo regional. Su famosa curva "Peraltada" y el paso por el Foro Sol lo convierten en un trazado único, que combina velocidad, técnica y una atmósfera incomparable gracias a la pasión de los fanáticos mexicanos.</h2>
+            </div>
+        </div>
+        <div class="derechaDetailed">
+            <div class="superiorDerecha">
+                <div class="divImagenCircuito">
+                    <img src="https://e00-marca.uecdn.es/deporte/motor/formula1/img/circuitos/monaco.jpg" alt="" id="imagenDetailedCircuito">
+                </div>
+            </div>
+            <div class="inferiorDerecha">
+                <div class="divDatosDetailed">
+                    <h2 id="curvas">Curvas: 19</h2>
+                    <h2 id="record">Record: 1:12.909 (L. Hamilton, 2021)</h2>
+                    <h2 id="longitud">Longitud: 3.337 km</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../scripts/users/circuitos.js"></script>
+</html>
